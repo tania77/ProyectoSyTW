@@ -1,0 +1,117 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <p class="navbar-brand">Categorías</p>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+    <div class="container">
+        <h1>Elige Nuestros Productos</h1>
+        <p>Busca la comida y bebida que prefieras</p>
+       <!-- <form (submit)="searchMovies()">
+            <input type="text" class="form-control" [(ngModel)]="searchStr" name="searchStr">
+            <br>
+            <button class="btn btn-primary btn-lg">Find</button>
+        </form>-->
+    </div>
+</div>
+<!--
+<div *ngIf="searchRes" class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Search Movies</h3>
+
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of searchRes;let i=index" class="col-md-2">
+                 <div *ngIf="i<6">
+                     <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+                     <h4>{{movie.title}}</h4>
+                     <p>{{movie.realease_date}}</p>
+                     <p><a routerLink="/movie/{{movie.id}}" class="btn btn-default">View Details</a></p>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Popular Movies</h3>
+
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of popularList;let i=index" class="col-md-2">
+                 <div *ngIf="i<6">
+                     <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+                     <h4>{{movie.title}}</h4>
+                     <p>{{movie.realease_date}}</p>
+                     <p><a routerLink="/movie/{{movie.id}}" class="btn btn-default">View Details</a></p>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div class="panel panel-default">
+  <div class="navbar navbar-default">
+    <div class="container navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li><a href="">Bebidas calientes</a></li>
+        <li><a href="">Bebidas frías</a></li>
+        <li><a href="">Bocadillos</a></li>
+        <li><a href="">Sandwiches</a></li>
+        <li><a href="">Croissants</a></li>
+        <li><a href="">Bollería</a></li>
+        <li><a href="">Jugos</a></li>
+
+      </ul>
+    </div>
+  </div>
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let producto of productos;let i=index" class="col-md-3">
+                 <div *ngIf="i<30" id="fotosProductos">
+                     <img  class="thumbnail" src="{{producto.imagen}}">
+
+                     <div class="row">
+                       <div class="col-md-7"> <h4>{{producto.producto}}</h4></div>
+                       <div class="col-md-2">
+                         <h4>{{producto.precio}}</h4>
+                       </div>
+                     </div>
+                      <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8"><button class="btn btn-primary btn-lg btn-block">Añadir</button></div>
+                        <div class="col-md-2"></div>
+
+                      </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<hr>
+
+<footer>
+    <p>&copy; 2016 MovieFinder</p>
+</footer>
